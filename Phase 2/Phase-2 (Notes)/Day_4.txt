@@ -1,0 +1,85 @@
+table - student
+ studid - int
+ studname - varchar
+ age - int
+ city - varchar
+
+4 opearations
+- insert records but dynamically
+ - delete reords
+ - update record (single)
+ - count number of students in class
+
+
+html page
+ one servlet
+one class - model ---> jdbc cpde will be there and then from servlet i will call this model class
+web.xml
+
+1 Dynamic Project - ServletJDBC
+2 HTML page ---> index.html
+3 java class ---> DBConnection.java ( insde the src---> package)
+4 Servlet --->  ProductDetails.java
+5 database ---> CREATE DATABASE ecommerce 
+6 table inside the database ---> 
+CREATE TABLE eproduct (ID bigint primary key auto_increment, name varchar(100), price decimal(10,2), date_added timestamp default now()) 
+7 to insert the records into the eroduct table
+insert into eproduct(name,price) values('HP Laptop ABC', 12000);
+insert into eproduct(name,price) values('Acer Laptop ABC', 14000);
+insert into eproduct(name,price) values('Lenovo Laptop ABC', 12000);
+
+8.config.properties file under WEB-INF folder
+and insert the url, password and username
+
+9. import all the jar files for the servelt + jdbc 
+
+10. insert the anchor link in html page
+<body>
+<a href="list">Product Info</a><br>
+</body>
+
+ProductDetails.java
+
+@WebServlet("/ProductDetails")
+public class ProductDetails extends HttpServlet {
+ 
+        protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException { 
+                try {
+                        PrintWriter out = response.getWriter();
+                        out.println("<html><body>");
+                         
+                        InputStream in = getServletContext().getResourceAsStream("/WEB-INF/config.properties");
+                        Properties props = new Properties();
+                        props.load(in);                    
+                        
+                        DBConnection conn = new DBConnection(props.getProperty("url"), props.getProperty("userid"), props.getProperty("password"));
+                        Statement stmt = conn.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+                        stmt.executeUpdate("insert into eproduct (name, price, date_added) values ('New Product', 17800.00, now())");
+                        out.println("Executed an insert operation<br>");
+                 
+                        stmt.executeUpdate("update eproduct set price=2000 where name = 'New Product'");
+                        out.println("Executed an update operation<br>");
+                        
+                        stmt.executeUpdate("delete from eproduct where name = 'New Product'");
+                        out.println("Executed a delete operation<br>");
+                        
+                        stmt.close();
+                        
+                        conn.closeConnection();                 
+                        out.println("</body></html>");
+                        conn.closeConnection();
+                        
+                } catch (ClassNotFoundException e) {
+                        e.printStackTrace();
+                } catch (SQLException e) {
+                        e.printStackTrace();
+                }
+        }
+
+        protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+                doGet(request, response);
+        }
+}
+
+
+

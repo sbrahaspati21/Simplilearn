@@ -1,0 +1,9 @@
+1. program files should have the JRE
+2. download the tomcat 7.0 version ---> https://archive.apache.org/dist/tomcat/tomcat-7/v7.0.47/bin/
+3. link for the manual for installation of tomcat:- https://www.wikihow.com/Install-Tomcat-on-Windows
+4. configure the tomcat in eclipse --> https://beginnersbook.com/2017/06/how-to-configure-apache-tomcat-server-in-eclipse-ide/
+5. start the tomcat
+
+
+
+   

@@ -1,0 +1,99 @@
+1. Encapsulation
+if any class is having all the data members or variables of the class as private and has the getters and setters method
+- to make class more secured from the security mechanism
+
+-----------------------------------------------------------------------------------------------
+
+2. Inheritance
+if you have the parent class and that class has few features like variables and methods so these features will be available to the child class autotmtically when the child class is inherited.
+- three types of inheritance
+(1) Single
+(2) Multilevel
+(3) Herarchical
+
+- Multiple inheritance is NOT ALLOWED in java it means a child cannot have two parents
+- a parent class cannot be encapsulated completely it means it cannot be made as private.
+- all the variables of the parent will also be available inside the grand child class
+- parent and child classes can be in same or different packages.
+
+class subclass extends Parentclass{   
+
+}
+
+class Vechile {   ---> Parent class
+
+} 
+
+class 2_Wheeler extends Vechile {   ---> Child class
+
+}
+
+------------------------------------------------------------------------------------------------------
+
+3. Polymorphism - one object multiple forms
+
+Parent refernce = new Child();
+two types:
+(1) Runtime polymorphism - dynamic polymorphism  - method overriding  ---> happens when inheritance is there
+(2) compile time polymorphsim - static Polymorphsim  - method overloading  ---> happens in same class
+Static polymorphism:
+---> it is acchieved using the function overlaoding
+---> it happens inside the same class
+---> it happens at the compile time only
+
+dynamic polymorphism:
+----> it is hapens at the runtime
+--->it is acheived using the inheritance concept
+---> it is done using the overriding concept
+---> will incase of inheritance only between differnt calsses
+overrding:- same method name +  same return type + same access modifier and same number of arguments
+   Parent p = new Child();
+   parent refernce but object of child
+
+Note*** -- whenevr we have the runtime polymorpishm so,
+Parent p = new Child();   
+so methods will be called for the Child class and variables will be called for Parent class
+
+SBI k = (SBI) b;  -> calling the variables of child class not parent
+
+------------------------------------------------------------------------------------------------------
+
+4. Abstraction:
+only showing the important details which is needed to the user and rest personal information which we cant disclosed to the user is hidden and is visible to us only
+
+1. like- phone and salary you cant disclose openly so we will make that class as abstarct
+2. any class to be made as abstract it should be made abstarct by using keyword infront of it
+3. any abstarct class will have one method as abstarct that is necessary.
+4. any abstarct class can have both abstract and non-abstract methods as well.
+5. we only declare the abstarct method not define it in the same class
+6. we need to provide the defination of the absttarct class in the child class itself
+7. we cant create an object of the abstarct class
+8. we can only create the refernce type of abstract class but object will be of non-abstarct class
+
+----------------------------------------------------------------------------------------------------
+
+Interface:
+1. we can implement the multiple inheritance concept in core java using the interfaces
+2. all the methods declared only inside the interfaces are all abstract by default in nature
+3. all the variables which are defined in interfaces are by default public + static + final = constant
+4. an interface can extends more than 1+ interfaces 
+    like- interface A extends B, C, D,.... - multiple inhertance in interfaces
+5. a class can implement more than 1+ interfaces
+6. interface reference type is created but class type is object
+
+----------------------------------------------------------------------------------------------------
+Super - used when i need to call my parent method or parent constructor
+
+this - is used when i need to call my same class variables or methods or constructors
+----------------------------------------------------------------------------------------------------
+
+Static:
+1) methods
+2) variables
+3) to call the static method there is no compulsion to use the object we can call using the classname also.
+4) Static methods will only call the static variables.
+5) if we are having the static value of the variable it will be same across the all the class objects
+6) in nested inner classes we can use the static infront of the class name
+7) non-static methods can access the static variables
+8) static blocks ---> static methods  ---> constructors  --> normal methods
+9) static methods cannot be overriden

@@ -1,0 +1,129 @@
+two types of exceptions will occur:
+1) Error -->asyncronous---> this we can't control through our code
+2) syncornous ---> programming code, syntax compile time errors, runtime errors
+
+
+Checked Exception:
+These occur at the compile time of the program...
+
+
+UnChecked Exceptions:
+whoch occur due to the prograaming logic
+
+1) int ar[] = new int[20];  --->ArrayindexOutOfBoundException
+
+
+2) Employee emp = new Employee();
+emp.display();
+emp=null;
+emp.dispaly(); ---> NullpointerException
+
+3) int y =5/0; ---> AirthmeticException
+
+Object ---> Throwable ---> Exception ----> 
+(1) Checked   (2) UnChecked
+
+
+-------------------------------------------------------------------------------------
+
+
+try{
+   line ---1
+   line ---2  
+}
+catch(Exception e)
+{ 
+    line ----3
+}
+finally{
+   line ---4
+}
+
+try: if any code is there which you think can cause exception so this will go inside the try block
+
+catch : it is used to catch the expcetion from the try block
+
+finally : it is used to execute the code of block if or not exception occurs
+
+-   try - catch
+-   try - finally
+-   try - catch - finally
+
+
+
+try
+{
+
+
+
+}
+catch(FileNotFoundEception e)
+{
+
+
+}
+
+catch(AirthemticEception e)
+{
+
+
+}
+catch(Exception e)
+{
+
+
+}
+finally
+{
+
+
+
+}
+
+
+ class AgeException extends Exception{
+
+   AgeException (String s)
+   {
+      super(s);
+   }
+
+}
+
+
+
+throws  and  throw  
+1. if you are usibg the checked exceptions then dont use try block 
+2. we write throws <checked_exception_name> with the method signature
+
+public void add() throws IOException, ClassNotFoundException{
+
+throw new IOException("file i/o not found");
+}
+
+throws only with checked exception
+throw with both checked and unchecked
+
+custom exception:
+class custom extends Exception{
+
+  public custom(String message){
+
+    super(message);
+  }
+
+
+catch(Exeception e){  e.getMessage();
+}
+
+
+
+//*** Parent-Child Classes Exception Declaration Rules***//
+// 1. If the superclass method does not declare an exception, subclass overridden method 
+//    cannot declare the checked exception but can declare unchecked/runtime exception.
+
+// 2. If the superclass method does not declare an exception, subclass overridden method
+//    cannot declare the checked exception.
+
+// 3. If the superclass method declares an exception, subclass overridden method can 
+//    declare same, subclass exception or no exception but cannot declare parent exception

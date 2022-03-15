@@ -1,0 +1,63 @@
+Data types:
+
+1. char  : 16 bits --> 2 bytes---> 'M' , 'F'  ---> online application in which you are capruting the gender of the applicant
+2. byte  ---> 8 bits   ---> 1 byte
+3. int  ----> 4 bytes   ---> some value is numeric --->3456, 8976  etc.
+4. long  -----> 8 bytes --->  it is the same as int only but if you want to store some higer value inside this int ----> distance calcuation
+5. double  ---> 8 bytes  ---> it is the same as float only but if you hav the higer pricision value ---> 3.14587757575
+6  float   ---> 4 bytes --->  it is floating point type in java where we can use the decimal part  eg - 67.8%
+7. boolean --->1 bit ---> two values : false and true   --- > 
+
+Syntax:   <datatype>  variable_name = value;
+
+------------------------------------------------------------------------------------------------------------
+Typecasting:
+
+1) implicit typecasting ----> converting from the lower datatype to higher datatype.When a smaller data type is converted automatically to the biiger data type
+eg : int ---> long  /   float --> double  /   int ---> float    /   
+
+int a= 10;    
+long j = a -----> implicit typecasting
+
+
+2) explicit typecasting ----> converting from the higher datatype to lower datatype
+eg : long ---> int   / double ---> float
+example:  
+long ab = 60000000l;
+int y =(int) ab   --->typecasting the value of long to int y   ----> explicit typecasting
+
+or
+
+float f1 = 10.7f;
+double r = f1;
+
+or
+
+long l = 1200000l;
+int p = (int)l;
+
+convert a double---> long ---> int -----> byte
+convert long ----> float ----> int ----> char
+
+----------------------------------------------------------------------------------------------------------
+
+ java project ---> combination of multiple packages
+ 1 package ---> combination of multiple java classes
+
+Object ---> it is the mother class of the java ---> it means all the classes are being created inside this parent object class
+
+----------------------------------------------------------------------------------------------------------
+
+ Steps for creating the java project:
+ 1) Project ---> File --> New ---> Other ----> Java(yellow folder) ---> Java Project
+
+ 2) Package ---> Right click(src) ---> New ---> Package
+
+ 3) Class ---> Right click(package) ---> New ---> Class
+
+  how to import the java project:
+  File ---> Import ---> Existing Projects into workspace  ---> Click "Next" ---> Click "Browse" ---> select the unzipped project ---> Click checkbox -->   Finish
+
+ Class --->it is known as grouping of the functions, variables and otherjava sub modules
+ Syntax:
+ <access-modifer>  class  <class-name>  {

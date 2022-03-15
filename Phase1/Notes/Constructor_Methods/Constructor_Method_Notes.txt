@@ -1,0 +1,66 @@
+Function:
+
+if function has return type ( int, float, long ,double, char, boolean, String ...etc)  ---> then use return inside the function
+if function will not return anything then use as 'void' return type;
+
+Syntax: 
+<acess_modifier>  return_type  function_name(argument1, ,2,3, ,4 ....) {
+
+}
+
+eg: 
+public void area(int g, int h)
+{
+int o = g *h;         ----> o is the local variable
+System.out.println(" value of" + o);
+}
+
+public int calcualte(int a ,int b)    ----> function arguemnts
+{
+   int c = a + b;
+   return c;   ---> return statement
+}
+
+public int area(){
+
+}
+
+float area(){
+
+
+}
+
+--------------------------------------------------------------------------------------------------------
+
+Constructors: 
+--> methods which has no return type and has same name as classname
+
+public class Employee{
+
+int a, b;   ---> class variables
+
+public Employee(){   ---> no- argument contructor
+   a = 10;
+   b = 20;
+}
+
+public Employee(int j , int k)
+{
+   a = j;  ---> a = 4 
+   b = k;  ---> b = 5
+
+}
+
+public void salary()   ---> normal method
+{
+  System.out.pritnln(a + "  " + b );
+}
+
+psvm(){
+    Employee  ob  =  new Employee();   ---> object of the class 'Employee' ---> no -arg
+
+    Employee  ob1  =  new Employee(4,5);  ---> parametezed constructor being called
+     
+    ob.salary()  --> calling salary function
+}
+}

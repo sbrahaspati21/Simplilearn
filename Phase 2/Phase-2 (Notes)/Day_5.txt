@@ -1,0 +1,47 @@
+1) Configration --->it is responsible for mapping the hibrenate cfg xml file and load it to load the daabase driver and properties
+
+2) SessionFactory ---> is used to contain the mapping files of the beans and it is also one per application
+
+3) Session ----> is used to create the java bean objects presist into the database
+
+4) Trnansaction ----> is used whevener we have to run any query (select,insert,update,delete,count.....)
+
+5) Query ----> is used to write and exeucte it .
+
+Bean class:
+This is normal public java class in which we have two things
+- private member variables
+- getter/setter methods
+
+
+ <hibernate-mapping>  
+  <class name="com.javatpoint.mypackage.Employee" table="emp">  
+    <id name="empid">  
+     <generator class="assigned"></generator>  
+    </id>  
+            
+    <property name="empName"></property>  
+    <property name="salary"></property>             
+  </class>       
+ </hibernate-mapping>
+
+Step 1: Create the java project - HibernatePhase2
+Step 2: create a java package ---> com.phase2.programs  and load the jar files
+Step 3: create a xml file --> with the name of the hibernate.cfg.xml
+Step 4: create a java bean -----> Employee.java
+Step 5: create a class mapping file---> employee.hbm.xml 
+Step 6: make an entry of step (5) into the hibernate.cfg.xml file using the <mapping resource.....> tag
+Step 7: create a database table
+Step 8: create a java main class 
+
+
+Annotations: we have ot use whne xml file is not be created
+@Entity ---> is used to define that this class is my bean class
+@Table(name = "STUDENT") ---> this is also used with @Entity to show that my database table is mapped wth this class bean
+@Id
+@GeneratedValue(strategy = GenerationType.AUTO) ---> this is used to depict that this java variable is the primary key inside the table and the genertor type is auto-increment
+
+
+
+
+

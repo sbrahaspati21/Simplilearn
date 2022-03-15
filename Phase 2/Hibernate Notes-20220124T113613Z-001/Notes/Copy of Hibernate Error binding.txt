@@ -1,0 +1,9 @@
+hbm$binder error on console
+
+
+Steps to solve:
+https://hibernate.org/orm/releases/5.0/
+import these two jar files only below:-
+
+hibernate-release-5.0.12.Final\lib\required
+hibernate-core-5.0.12.Final.jar

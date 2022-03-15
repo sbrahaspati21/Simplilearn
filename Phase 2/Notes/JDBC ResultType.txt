@@ -1,0 +1,48 @@
+ResultSet Types:
+
+1) Forward Only (ResultSet.TYPE_FORWARD_ONLY)-
+
+This type of ResultSet instance can move only in the forward direction from the first row to the last row. ResultSet can be moved forward one row by calling the next() method. We can obtain this type of ResultSet while creating Instance of Statement, PreparedStatement or CallableStatement.
+Syntax: 
+Statement stmt = connection.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_READ_ONLY);
+ResultSet rs = stmt.executeQuery("select * from tbluser");
+
+
+
+2) Scroll Insensitive (ResultSet.TYPE_SCROLL_INSENSITIVE) - 
+
+Scroll Insensitive ResultSet can scroll in both forward and backward directions. It is insensitive which means any change to the database will not show change in the ResultSet while it open. But it is not sensitive to data changes. It will only have data when the query was executed and ResultSet was obtained. It will not reflect the changes made to data after it was obtained.
+Syntax:
+Statement stmt = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,          ResultSet.CONCUR_READ_ONLY);
+ResultSet rs = stmt.executeQuery("select * from tbluser");
+
+
+
+3) Scroll Sensitive (ResultSet.TYPE_SCROLL_SENSITIVE)-
+
+Scroll Sensitive ResultSet can scroll in both forward and backward directions. It can also be scrolled to an absolute position by calling the absolute() method. But it is sensitive to data changes. It will reflect the changes made to data while it is open.
+Syntax:
+Statement stmt = connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,        ResultSet.CONCUR_READ_ONLY);
+ResultSet rs = stmt.executeQuery("select * from tbluser");
+
+
+
+------------------------------------------------------------------------------------------------------
+ResultSet Concurrency:
+
+1) Read Only (ResultSet.CONCUR_READ_ONLY)
+It is the default concurrency model.  We can only perform Read-Only operations on ResultSet Instance. No update Operations are allowed.
+
+2) Updatable (ResultSet.CONCUR_UPDATABLE)
+In this case, we can perform update operations on ResultSet instance.
+
+
+ResultSet Navigational Methods:
+
+- boolean absolute(int row) throws SQLException: This method moves ResultSet cursor to the specified row and returns true if the operation is successful.
+-void afterLast() throws SQLException: This method moves ResultSet cursor to the position after the last row.
+- void beforeFirst() throws SQLException: This method moves ResultSet cursor to the position before the first row.
+- boolean first() throws SQLException: This method moves ResultSet cursor to the first row.
+- boolean last() throws SQLException: This method moves ResultSet cursor to the last row.
+- boolean next() throws SQLException: This method moves ResultSet cursor to the next row.
+- boolean previous() throws SQLException: This method moves ResultSet cursor to the previous row.

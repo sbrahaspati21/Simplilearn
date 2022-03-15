@@ -1,0 +1,91 @@
+1) Hibernate example
+Employee.java----> StoreData.java--->employee.hbm.xml
+
+2) Annotation
+StudentAnnotation.java---> AnnotationTest.java
+
+3) HQL (insert)
+StudentHQL.java---> InsertDataHQL.java----> student.hbm.xml
+
+4) HQL(select)
+StudentHQL.java---> SelectHQL.java----> student.hbm.xml
+
+5) HQL(update/Delete)
+StudentHQL.java---> UpdateDataHQL.java----> student.hbm.xml
+
+6) Inheritance (Table-per-Heirarchy)-->discriminator used--->single table
+EmpInherit.java----> Regular_Employee.java -----> Contract_Employee.java------> TablePerHeirar.java --->tableperheirar.hbm.xml
+
+7) Inheritance (Table-per-concrete)----> each table created for each class
+EmpInherit.java----> Regular_Employee.java -----> Contract_Employee.java------> TablePerConcrete.java ---> tableperconcrete.hbm.xml
+
+8) Inheritance (Table-per-subclass)----> each table created for each class
+EmpInherit.java----> Regular_Employee.java -----> Contract_Employee.java------> TablePerSubclass.java ---> tablepersubclass.hbm.xml
+
+9) One-to-One Mapping
+OneToOneMapping.java---->  adressmapping.hbm.xml --->  empmapping.hbm.xml
+
+10) One-To-Many Mapping / Many-To-One Mapping / Collection Mapping
+OneToManyMapping.java----> CertiOntoMany.java----> onetomany.hbm.xml ----->EmpOnToMany.java
+
+11) Caching
+HibernateCacheExample.java
+
+12) Criteria Query
+HibernateCriteriaExamples.java
+
+13) HQL(all functions)
+HQLAddress.java----> HQLEmployee.java ---->HQLExamples.java ---->hibernate.cfg.xml (mapping)
+
+14) Procedure using Hibernate
+Employee_Procedure.java ---> Procedure_Main.java
+
+7. Log4j with Hibernate
+https://examples.javacodegeeks.com/enterprise-java/hibernate/hibernate-sql-parameter-values-using-log4j-example/
+
+
+1) Hibernate Criteria API provides object oriented approach for querying the database and getting results. 
+2) We can’t use Criteria in Hibernate to run update or delete queries or any DDL statements. 
+3) Hibernate Criteria query is only used to fetch the results from the database using object oriented approach.
+____________________________________________________________________________________________________________
+Hibernate comes with different types of Cache:
+First Level Cache: Hibernate first level cache is associated with the Session object. Hibernate first level cache is enabled by default and there is no way to disable it. However hibernate provides methods through which we can delete selected objects from the cache or clear the cache completely.
+Any object cached in a session will not be visible to other sessions and when the session is closed, all the cached objects will also be lost.
+
+Second Level Cache: Hibernate Second Level cache is disabled by default but we can enable it through configuration. Currently EHCache and Infinispan provides implementation for Hibernate Second level cache and we can use them. We will look into this in the next tutorial for hibernate caching.
+
+____________________________________________________________________________________________________________
+
+First Level Cache in Hibernate Important Points
+- Hibernate First Level cache is enabled by default, there are no configurations needed for this.
+- Hibernate first level cache is session specific, that’s why when we are getting the same data in same session there is no query fired whereas in other session query is fired to load the data.
+- Hibernate first level cache can have old values, as you can see above that I have put my program to sleep for 10 seconds and in that time I updated the value (name from Pankaj to PankajK) in database but it didn’t get reflected in the same session. But in other session, we got the updated value.
+- We can use session evict() method to remove a single object from the hibernate first level cache.
+- We can use session clear() method to clear the cache i.e delete all the objects from the cache.
+- We can use session contains() method to check if an object is present in the hibernate cache or not, if the object is found in cache, it returns true or else it returns false.
+- Since hibernate cache all the objects into session first level cache, while running bulk queries or batch updates it’s necessary to clear the cache at certain intervals to avoid memory issues.
+
+
+Table-per-subclass---> it is also known as joined-sublcass---> foriegn key is used to match with the  primary key of the parent table
+1) in this type of inheritance weare using the joined class attribute ---> tables have some relation in form of joins
+
+Table-per-concerete ----> it is also known as table-per-class
+1) in this every class of java is having the seperate table and each table is un-related to each other
+
+Process/ Flow steps to create the Hibernate application::-
+1) Create Java Bean class----> Employee.java (instance variables with getter/setter)
+2) Create class mapping file ----> employee.hbm.xml ( name should be same as class name of java)
+3) Make entry of employee.hbm.xml file into----> hibernate.cfg.xml (mapping tag)---->configuration mapping file
+4) Create table in DBMS (mysql) with the name of the java class
+
+
+Hibernate:-
+1) ORM framework. Object-Relation-Mapping
+2) hibernate.cfg.xml---->database connection parameters 
+3) <classname>.hbm.xml----> this is the configuration mapping file where my java class mapping is done with the table name
+4) every java class is mapped with one hbm.xml file
+5) Hibernate framework contains the JDBC architecture
+6) SessionFactory is created one per project/application
+7) Session---> is created and destroyed. Every transaction we need to create like insert/delete/update/select session is created and destroyed. save and persist are almost same terms---> means to save the data inside teh table;
+
+1) Configuration Object   ----> 2) SessionFactory ------> 3) Session -------> 4) Transaction-------->5) Query

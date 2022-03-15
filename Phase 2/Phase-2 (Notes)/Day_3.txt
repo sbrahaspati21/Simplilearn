@@ -1,0 +1,59 @@
+JDBC:
+1. to install the xampp server
+2. install the mysql setup
+3. check the path directory (pasted in chat window)
+   MySQL location is: C:\Program Files\MySQL\MySQL Server 5.1\bin
+   xampp location is: C:\xampp\mysql\bin
+4. Open CMD and follow the MYSQL steps (pasted in chat window)
+5. Create a java project
+6. import the jar files for the JDBC into the java project
+
+executeQuery() ---> to be used when only i have to fetch the data from the table not modify the table
+ ResultSet will be used only to fetch the data and collect it
+
+executeUpdate() ---> to be used when i have to modfify some data inside the table (create)
+  ---> if 0 then fail
+  ---> if 1 then pass
+
+Steps:
+Step 1: Datasource ::: JDBC URL, username and password of MySQL server
+    private static final String url = "jdbc:mysql://localhost:3306/db_world";
+    private static final String user = "root";
+    private static final String password = "root";
+
+Step 2: // JDBC variables for opening and managing connection
+    private static Connection con;
+    private static Statement stmt;
+    private static ResultSet rs;
+
+Step 3: register the driver
+       Class.forName("com.mysql.jdbc.Driver");
+
+Step 4: opening database connection to MySQL server
+       con = DriverManager.getConnection(url, user, password);
+
+Step 5: getting Statement object to execute query
+       stmt = con.createStatement();
+
+Step 6: run the query which is query1 over here and result will be stored inside the resultset object
+       rs = stmt.executeQuery(query1); 
+
+Step 7: to iterate over the Resultset object and fetch the data using the while loop
+      while (rs.next()) 
+    	{ 
+    	   int id = rs.getInt(1); 
+    	   String name = rs.getString(2); 
+    	   String salary = rs.getString(3); 
+    	   System.out.printf("empid : %d, empname: %s, salary : %s %n", id, name, salary); 
+    	}
+
+Step 8: close the connection / resultset / statement
+
+-------------------------------------------------------------------------------------------------------------
+
+To register the IN paramter ---> set  ---> used to take the input from the procedure
+to register hte OUT paramter ---> registerOutPararmeter  ----> this is used to give the output from the procedure
+
+INOUT ---> is used to take he input and provide the output as well.
+
+

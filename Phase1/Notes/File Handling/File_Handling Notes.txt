@@ -1,0 +1,48 @@
+Different classes that can be used in Java for File Handling:
+
+Java DataInputStream:
+class allows an application to read primitive data from the input stream
+
+FileOutputStream:
+FileOutputStream is meant for writing streams of raw bytes such as image data. For writing streams of characters, consider using FileWriter.
+Important methods:
+void close() : Closes this file output stream and releases any system resources associated with this stream.
+protected void finalize() : Cleans up the connection to the file, and ensures that the close method of this file output stream is called when there are no more references to this stream.
+void write(byte[] b) : Writes b.length bytes from the specified byte array to this file output stream.
+void write(byte[] b, int off, int len) : Writes len bytes from the specified byte array starting at offset off to this file output stream.
+void write(int b) : Writes the specified byte to this file output stream.
+
+
+
+FileInputStream:
+FileInputStream is useful to read data from a file in the form of sequence of bytes. FileInputStream is meant for reading streams of raw bytes such as image data. For reading streams of characters, consider using FileReader.
+Constructor and Description
+FileInputStream(File file) :Creates an input file stream to read from the specified File object.
+FileInputStream(FileDescriptor fdobj) :Creates an input file stream to read from the specified file descriptor.
+FileInputStream(String name) :Creates an input file stream to read from a file with the specified name.
+
+
+
+BufferedOutputStream:
+Java BufferedOutputStream class is used for buffering an output stream. It internally uses buffer to store data. It adds more efficiency than to write data directly into a stream. So, it makes the performance fast.
+
+
+
+BufferedInputStream:
+class is used to read information from stream. It internally uses buffer mechanism to make the performance fast. When the BufferedInputStream is created, an internal buffer array is created. As bytes from the stream are read or skipped, the internal buffer is refilled as necessary from the contained input stream, many bytes at a time.
+Constructor and Description
+BufferedInputStream(InputStream in) : Creates a BufferedInputStream and saves its argument, the input stream in, for later use.
+BufferedInputStream(InputStream in, int size) : Creates a BufferedInputStream with the specified buffer size, and saves its argument, the input stream in, for later use.
+
+
+--------------------------------------------------------------------
+Different operations that can be performed on a file are:
+
+Creation of a new file
+Opening an existing file
+Reading from file
+Writing to a file
+Moving to a specific location in a file
+Closing a file
+
+---------------------------------------------------------------------

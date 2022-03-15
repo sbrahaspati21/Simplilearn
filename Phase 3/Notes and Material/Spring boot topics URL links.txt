@@ -1,0 +1,182 @@
+Topics for notes(practical examples ) : ( https://www.javainuse.com/spring/SpringBootInterviewQuestions) 
+
+Spring Boot ---> form login----> https://www.javainuse.com/spring/spring-boot-form-handling
+https://www.javainuse.com/spring/boot_form_security
+
+
+Default and Custom Event handling:
+http://www.discoversdk.com/blog/spring-boot-custom-events
+https://www.logicbig.com/tutorials/spring-framework/spring-core/spring-events.html 
+https://www.splessons.com/lesson/spring-event-handling/
+https://howtodoinjava.com/spring-core/how-to-publish-and-listen-application-events-in-spring/
+https://www.tutorialspoint.com/spring/custom_events_in_spring.htm
+
+
+Difference btw Spring VS Spring boot:
+https://java2blog.com/difference-spring-spring-boot/
+
+Spring boot First Application and Setup in eclipse:
+Spring Boot Application Steps.docx --> eclipse
+
+
+Spring boot JDBC:
+https://java2blog.com/spring-boot-jdbc-example/  --> eclipse 
+https://www.tutorialspoint.com/springjdbc/springjdbc_jdbctemplate.htm
+https://www.technicalkeeda.com/spring-tutorials/rowmapper-and-beanpropertyrowmapper-example
+https://www.journaldev.com/17053/spring-jdbctemplate-example
+
+
+Spring boot MVC:
+Spring-MV-LoginForm (project)  --> eclipse
+https://codenuclear.com/spring-mvc-flow-with-example/
+https://www.onlyxcodes.com/2020/07/spring-boot-mvc-crud-example.html ---> good example project
+
+
+Spring boot exception handling
+https://www.javainuse.com/spring/boot-exception-handling
+https://www.springboottutorial.com/spring-boot-exception-handling-for-rest-services
+https://www.tutorialspoint.com/spring_boot/spring_boot_exception_handling.htm
+
+
+Spring boot SOAP Webservice:
+https://www.javainuse.com/spring/springbootsoapwebservice 
+https://www.soapui.org/docs/soap-and-wsdl/working-with-wsdls/   --> Create Project From WSDL
+https://www.springboottutorial.com/creating-soap-web-service-with-spring-boot-web-services-starter
+https://howtodoinjava.com/spring-boot/spring-boot-soap-webservice-example/
+
+
+Spring REST:
+-----> GGOD EXAMPLe --->https://www.onlyxcodes.com/2020/01/consume-restful-webservice-in-java.html
+https://howtodoinjava.com/spring-boot2/rest/rest-api-example/ ---> eclipse project
+https://www.springboottutorial.com/creating-rest-service-with-spring-boot
+https://www.journaldev.com/2552/spring-rest-example-tutorial-spring-restful-web-services  --> eclipse
+https://www.journaldev.com/21127/spring-boot-rest-example   --> eclipse
+https://www.javatpoint.com/spring-boot-rest-example  --->
+https://www.codejava.net/frameworks/spring-boot/spring-boot-restful-crud-api-examples-with-mysql-database
+https://www.dineshonjava.com/jax-rs-web-service-tutorial/
+https://www.onlyxcodes.com/2020/02/spring-boot-restful-web-services-crud.html ---> with JPA --> eclipse
+https://codedelay.com/spring-boot-rest-example-restful-webservices-crud-example/
+
+
+Spring file upload/download: 
+https://www.javainuse.com/spring/boot-file-download  --> eclipse
+https://www.journaldev.com/2573/spring-mvc-file-upload-example-single-multiple-files  --> eclipse
+
+
+Spring boot swagger:
+https://www.javainuse.com/spring/boot_swagger  --> eclipse
+https://www.springboottutorial.com/spring-boot-swagger-documentation-for-rest-services  --> eclipse
+
+
+Spring boot with Apache Kafka:
+https://www.javainuse.com/misc/apache-kafka-hello-world --> set up apache kafke and test locally
+Download Apache Kafka --> https://www.apache.org/dyn/closer.cgi?path=/kafka/2.7.0/kafka_2.12-2.7.0.tgz
+https://www.javainuse.com/spring/spring-boot-apache-kafka-hello-world --> eclipse
+https://dzone.com/articles/magic-of-kafka-with-spring-boot
+https://howtodoinjava.com/kafka/spring-boot-with-kafka/
+https://www.tutorialspoint.com/apache_kafka/apache_kafka_workflow.htm -->workflow
+
+
+Spring boot H2 database:
+https://java2blog.com/spring-boot-h2-database/ ---> good example
+https://examples.javacodegeeks.com/spring-boot-h2-database-example/  --> good example
+https://howtodoinjava.com/spring-boot2/h2-database-example/
+
+
+Spring boot SSL(HTTPS):
+https://mkyong.com/spring-boot/spring-boot-ssl-https-examples/    --> eclipse
+https://www.javadevjournal.com/spring-boot/spring-boot-ssl/
+https://javadeveloperzone.com/spring-boot/spring-boot-ssl-configuration-example/
+https://howtodoinjava.com/spring-boot/spring-boot-ssl-https-example/  -->material
+
+
+Spring boot Microservices:
+https://dzone.com/articles/spring-boot-microservices-building-microservices-a  ----> eclipse
+https://www.dineshonjava.com/microservices-with-spring-boot/  
+https://examples.javacodegeeks.com/spring-boot-microservices-example/   --> eclipse
+https://www.javadevjournal.com/spring-boot/microservices-with-spring-boot/
+https://www.javatpoint.com/microservices
+https://howtodoinjava.com/spring-cloud/spring-cloud-api-gateway-zuul/
+https://www.springboottutorial.com/creating-microservices-with-spring-boot-part-1-getting-started
+
+
+Edge Server and routing using Zuul Gateway: -->  (code projects in below links)
+https://examples.javacodegeeks.com/enterprise-java/spring/spring-cloud-zuul-gateway-example/ --> eclipse
+https://howtodoinjava.com/spring-cloud/spring-cloud-api-gateway-zuul/
+https://www.tutorialspoint.com/spring_boot/spring_boot_zuul_proxy_server_and_routing.htm
+https://www.javainuse.com/spring/spring-cloud-netflix-zuul-tutorial
+
+
+Spring boot with JUnit-5:
+https://devqa.io/junit-5-annotations/  ---> good material
+https://www.guru99.com/junit-assert.html#10  --> assertion material
+https://www.journaldev.com/21735/junit-annotations   --> good material
+https://www.javaguides.net/2018/07/junit-5-assertions-with-examples.html
+https://howtodoinjava.com/junit-5-tutorial/   --> eclipse
+https://www.concretepage.com/testing/junit-5/junit-dynamic-tests  --> good material
+
+
+4. upload a file using Spring boot
+7. OAuth2? How to implement it using Spring Boot
+8. WebSockets? How tto implement it using Spring Boot?
+9. AOP? How to use it with Spring Boot
+10. Spring Cloud Components with Spring Boot
+
+Spring boot practicals: 
+https://www.javainuse.com/spring/sprboot
+
+
+https://download.springsource.com/release/TOOLS/update/3.9.4.RELEASE/e4.6/
+
+1. Go to help---> install new software
+2. Enter the above url inside the "work with:"
+3. click on Add button and then finish 
+
+
+Download the neon eclipse for spring boot: 
+https://www.eclipse.org/downloads/packages/release/neon/r/eclipse-ide-java-ee-developers
+
+STS plugin for eclipse: 
+https://www.codejava.net/ides/eclipse/install-spring-tool-suite-for-existing-eclipse-ide
+
+Spring boot:
+1. Dependency injection
+2. web application using spring boot
+3. submission form in spring boot
+4. REST API in spring boot
+5. Spring Data REST
+6. Spring boot security
+7. Spring boot with JPA + MySQL (with example)
+8. Spring boot cache
+
+topics:
+1. Spring actuator
+
+
+How Does Maven Work?
+A Maven repository contains all the JARs indexed by artifact ID and group ID. Once we add a dependency to our pom.xml, Maven asks the Maven repository for the JAR dependencies, giving group ID and the artifact ID as the input.
+The JAR dependencies are stored on your machine in a folder called maven local repository. All our projects refer to the JARs from here.
+Note: A local repository is a temp folder on your machine where Maven stores the JAR and dependency files that are downloaded from the Maven repository.
+
+
+
+https://howtodoinjava.com/spring-boot2/resttemplate/spring-restful-client-resttemplate-example/
+
+https://www.java2novice.com/spring-boot/
+
+
+Interview questions:
+https://www.journaldev.com/8611/spring-boot-interview-questions
+
+https://www.java67.com/2018/06/top-15-spring-boot-interview-questions-answers-java-jee-programmers.html
+
+https://howtodoinjava.com/interview-questions/spring-boot-interview-questions/
+
+https://www.javatpoint.com/spring-boot-interview-questions
+
+https://www.guru99.com/spring-boot-interview-questions.html
+
+
+
+
+

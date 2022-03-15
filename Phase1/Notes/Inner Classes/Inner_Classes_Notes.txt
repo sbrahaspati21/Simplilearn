@@ -1,0 +1,69 @@
+Inner class means one class which is a member of another class. There are basically four types of inner classes in java.
+1) Nested Inner class           --> Member_Inner.java
+2) Method Local inner classes   --> Method_Local_Inner.java
+3) Anonymous inner classes      --> Anonymous_Inner.java
+4) Static nested classes        --> Static_Nested.java
+
+
+Nested Inner class:
+1) They can access any private instance variable of outer class. 
+2) Like any other instance variable, we can have access modifier private, protected, public and default modifier.
+3) Like class, interface can also be nested and can have access specifiers.
+Eg- <Outer_class>.<Inner_class> in=<object of outer class>.new <inner _class>();  
+
+  A ob = new A();  --> object of outer class
+  A.B  in = ob.new B();  ---> object of inner class
+
+
+Method Local Inner classes:
+1) Inner class can be declared within a method of an outer class
+2) For (JDK-7/6) Method Local inner classes can’t use local variable of outer method until that local variable is not declared as final.The main reason we need to declare a local variable as a final is that local variable lives on stack till method is on the stack but there might be a case the object of inner class still lives on the heap.
+3) from the Inner class method i can call the methods of the outer class
+
+Static nested classes:
+1) Static nested classes are not technically an inner class. They are like a static member of outer class.
+
+Anonymous inner classes:
+1) Anonymous inner classes are declared without any name at all.
+
+
+class Hello {
+
+ Demo d = new Demo() {
+  
+
+};
+
+psvm(){
+Hello ob = new Hello();
+} 
+}
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

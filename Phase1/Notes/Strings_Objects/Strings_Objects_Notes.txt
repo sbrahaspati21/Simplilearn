@@ -1,0 +1,45 @@
+Strings and Object creation:  
+ 1) Objects are always stored in heap
+ 2) Objects which are not in use are stored inside the object pool and gets into the heap only after
+    new keyword allocation happens
+ 3) Student s;  ---> no object allocation 
+    s = new Student(); ---> object s assigned to Studetn class --> s object is on heap
+
+  4) my refernce variable is 's' stored on stack  but my student() object is stored on heap
+    Student s = new Student();
+
+  5) Student s= null; ---> making the student refernce variable 's' pointing to null
+ 
+  6) after null when we write as s.methodname() ---> gives NullPointerException
+
+
+String literals and Objects:
+ String h ="Hello";    ---> the object is being creted inside the string pool  
+
+ String k = new String("Hello");   --> the object is being creted inside the heap
+
+
+class variables / static variables / reference variable /local variables  ---> stack
+all methods or functions ---> on stack
+
+all the objects ---> heap
+
+  String k = new String("Java");    ---> two objects  = heap + string pool
+  
+  String y = "Java"  ---> already on the string pool
+
+  String l = new String("World");   ---> two objects  = heap + string pool
+
+  String m = "world";    ---> no object
+
+  String j = new String("Java");   ---> 1 object will be there i.e for the heap only not for the string pool
+===============================================================================================================
+
+Equals and == 
+1) equals is used to just compare the actual content of the objects
+2) == is used to check the reference address/ memory address / heap address to be same or not
+
+
+
+
+

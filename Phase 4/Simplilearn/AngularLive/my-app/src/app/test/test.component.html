@@ -1,0 +1,21 @@
+<p appBasicHighlight>Show Odd Numbers</p>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-primary">Only show odd numbers</button>
+      <br /><br />
+      <ul class="list-group">
+        <li
+          class="list-group-item"
+          *ngFor="let number of numbers"
+          [ngClass]="{ number: number % 2 !== 0 }"
+          [ngStyle]="{
+            backgroundColor: number % 2 !== 0 ? 'orangered' : 'transparent'
+          }"
+        >
+          {{ number }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

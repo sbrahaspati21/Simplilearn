@@ -1,0 +1,41 @@
+S  Q  L
+
+  S(Set)<I>                Q(Queue) <I>                L(List) <I>
+  - HashSet                - PrirorityQueue           - ArrayList
+  - LinkedHasSet                                      - Linkedlist
+  - TreeSet                                           - Vector
+
+
+Set---> this will be similar to array but it will not have the predefines size and it size can grow dynamically + it will not have the duplicates
+(a) Hashset ---> the insertion order of elements will be diffent from the order of output elements
+(b) LinkedHashSet -->  the insertion order of elements will be similar to the order of output elements
+(c) TreeSet ---> the elemnts will be sorted in asc/desc order whatever the insertion order is
+
+- dynamic memory allocation
+- no predefined size needed
+- any Object datatype can be stored here
+- used for sorting purposes
+
+  LinkedHashSet<Integer>   lhs  =  new LinkedHashSet<Integer>();
+  TreeSet   ts  =  new TreeSet();
+
+
+  LinkedList<String>  ll  =  new LinkedList<String>();
+
+
+Map: ---> this is the interface which will contain the elements in form of keys andd values.
+(1) map can have 1 null key and multiple null values.
+(2) using the key only we can retrieve the value from the map
+
+<k,v> , where k = key and v= value
+- HashMap
+- LinkedHashMap
+- TreeMap
+- Hashtable
+
+
+Generics: 
+we are able to restrict the datatype inside any collection class by using the <Data-type>
+for eg: 
+  LinkedHashSet<String> hs=new LinkedHashSet<String>();
+  --> this means this hs will contain only the string elements only

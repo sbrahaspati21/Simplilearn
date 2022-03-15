@@ -1,0 +1,55 @@
+Servlet filters:
+these are the pre-conditions to be fulfilled before hitting the actual servelt class
+- we can have as many number of filters
+- filters are independent of each other and they are also indepndent of servlet class
+
+<filter-mapping>
+    <filter-name>loginFilter</filter-name>
+    <url-pattern>/dashboard</url-pattern>
+    <url-pattern>/profile</url-pattern>
+  </filter-mapping>
+
+whatever the URL which will be mntioned insidethe filter-mapping only those URl will be allowed to enter the Filter class
+
+
+cookies:
+cookie.getName()  ---> this is used to gethte cookie name
+cookie.getValue() --> this is used to get teh cookie value using the cookie name
+
+---------------------------------------------------------------------------------------------------------------
+URL Rewriting
+
+Where to use:
+--> where you want to retrevive the infromation same as it is when we go back
+
+1) If your browser does not support cookies, URL rewriting provides you with another session tracking alternative. 
+2) URL rewriting is a method in which the requested URL is modified to include a session ID
+3) Extra form submission is not required on all pages
+
+---------------------------------------------------------------------------------------------------------------
+HttpSession:
+
+In web terminology, a session is simply the limited interval of time in which two systems communicate with each other. The two systems can share a client-server or a peer-to-peer relationship. However, in Http protocol, the state of the communication is not maintained. Hence, the web applications that work on http protocol use several different technologies that comprise Session Tracking, which means maintaining the state (data) of the user, in order to recognize him/her.
+
+In order to achieve session tracking in servlets, cookies have been one of the most commonly used tech. However, they have the following disadvantages:
+
+They can only keep textual information.
+They’re browser dependent. Hence, if the client disables them, your web application can’t make use of them
+Individual cookie can contain not more than 4kb of information
+
+Methods:::
+getSession() - Gets the HttpSession object. If the request doesn’t have a session associated with it, a new session is created
+
+getSession(boolean create) - Gets the session associated with the request. If not already present, then a new one is created based on the value of the boolean argument passed into it
+
+getId() - Returns the unique session id
+
+getLastAccessedTime()	It returns the time when this session was last accessed, measured in milliseconds.
+
+invalidate() -	Invalidates the session   ---> here user can kill the session eg- logout
+
+
+Advantages of Http Sessions in Servlet--
+- Any kind of object can be stored into a session, be it a text, database, dataset etc.- 
+- Usage of sessions is not dependent on the client’s browser.
+- Sessions are secure and transparent

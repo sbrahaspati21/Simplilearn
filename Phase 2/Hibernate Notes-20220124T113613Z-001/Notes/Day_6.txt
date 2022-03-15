@@ -1,0 +1,38 @@
+Collection Mapping:
+
+<key> -  element is used to define the foreign key in this table based on the Question class identifier.
+<index>  - element is used to identify the type. List and Map are indexed collection.
+<element> -  is used to define the element of the collection.
+
+
+1) Set/ One-to-Many / Many-to-One Mapping
+OneToManyMapping.java----> CertiOntoMany.java----> onetomany.hbm.xml ----->EmpOnToMany.java
+
+create table EmpOTMMapp (id INT NOT NULL auto_increment, first_name VARCHAR(20), last_name  VARCHAR(20), salary INT, PRIMARY KEY (id));
+create table CertificateOTM(id INT NOT NULL auto_increment, certificate_name VARCHAR(30), employee_id INT,PRIMARY KEY (id));
+
+
+2) List/Bag
+create table questionbag(id INT NOT NULL auto_increment, qname VARCHAR(200), PRIMARY KEY (id));
+create table answerbag(qid INT NOT NULL, answer VARCHAR(30));
+
+QuestionBag.java ---> BagCollectionMain.java ---> questionbag.hbm.xml
+
+
+3) Map
+create table questionmap(id INT NOT NULL auto_increment, name VARCHAR(200), username varchar(100), PRIMARY KEY (id));
+create table answermap(questionid INT NOT NULL, answer VARCHAR(300), username varchar(100));
+
+QuestionMap.java ---> MapCollectionMain.java ---> questionmap.hbm.xml
+
+
+4) Annotation with ManyToMany / Lazy loading
+create table categories(c_id INT NOT NULL, c_name varchar(100), PRIMARY KEY (c_id));
+create table items(i_id INT NOT NULL, i_name varchar(100), PRIMARY KEY (i_id));
+Categories.java --> Items.java --->  AnnotationManyToMany.java
+
+
+5) Component Mapping
+create table componentmapp (id INT NOT NULL auto_increment, name VARCHAR(100), city VARCHAR(100), country VARCHAR(100), pincode INT, PRIMARY KEY (id));
+CompMappEmp.java -->  CompMappAddr.java --->  ComponentMapping.java
+

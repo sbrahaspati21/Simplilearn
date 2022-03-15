@@ -1,0 +1,61 @@
+Server Technologies:
+1. Servlet
+
+Dtabases:
+MYSQL, MOngoDB, SQL, Oracle 11/12g
+
+PayLoad:
+Space Sharing concept(AWS)
+
+Web server: 
+it will be used to deploy theapplication ---> tomcat
+
+Application server : web server + EJB container  ---> glassfish, JBoss
+
+HTTP is connectionlesss protocol
+
+
+
+STEP 1: Inside the HTML we are giving the form action 
+Html ( ACTION="posthandler") 
+
+2) it will passing to  ----> web.xml 
+(this is known as deployment descriptor in which we have all the mappings of servlet classes)
+ <servlet-mapping>
+    <servlet-name>PostHandler</servlet-name>
+    <url-pattern>/posthandler</url-pattern>
+  </servlet-mapping>
+ <servlet>
+    <servlet-name>PostHandler</servlet-name>
+    <servlet-class>advanced.java.program.PostHandler</servlet-class>
+  </servlet>
+
+3) using the servlet-class your (container==web server == tomcat) will call the java servlet class
+advanced.java.program.PostHandler
+
+
+request --> is used to fetch the data or form data from the HTML page to the java class
+response ===> is used to snd the data back from the java class to the html page/client page/ browsr
+
+
+lifecycle of servlet inside the servlet container:
+1. init() ---> this is used to create the first servlet instance (object) on the first request
+2. service() ----> this is used to service the 2nd,3rd...onwards request coming to the servlet container and here thread will be used to service the requets
+3. destroy()  ---> this method is called only when i have to kill or destroy the serlvet instance
+
+
+
+
+SerlvetContext(Global variables for all servlets): 
+it means the parameters which will be shared across all the serlets classes same 
+<context-param>
+
+ServletConfig : every servlet which we create will hvae its own set of parameters
+<init-param>   </init-param>
+
+
+Steps:
+1. File ---> New ----> Other ---> Select "Web" (yellow folder)
+2. Select the "Dynamic Web Project" --> Click "Next" 
+3. Enter the Project name ---> Click "Finish"
+4. src ---> create java package ---> create java class(servlet)

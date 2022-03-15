@@ -1,0 +1,31 @@
+Assignment 1:
+
+create 2 objects of the set interface in same class
+LinkedHasSet (L1 & L2)
+L1  - 1st object will be generic ( add two int, two float ,two char, one boolean)
+L2  - 2nd object will be be Integer type only and add the number from user console in random order (1 to 8).
+      
+
+Assignment 2:
+
+Create one object of treeset and add the any 6 programming languages in random order
+   - remove two languages
+   - add three more after removal
+   - Check if " Java" is part of your treeset or not
+   - remove all the elements from the treeset and display it
+
+
+Assignment 3:
+Use LinkedList only in the below program
+   - Add 6 months (May, June, July, August, April, November)
+   - Add 'December' month as last
+   - Add 'January' month as first
+   - Add 'March' and then add 'Febuary' using the index based 
+   - Add 'Septemeber' and then add 'October' using the index based
+(1) Print the linkedlist in such a way that proper order of months are displayed
+(2) Get all the even months and print them 
+(3) Get all the odd months and print them
+(4) Use iterator to fetch and print all months 
+(5) Print the first and last month of the year together
+(6) remove your birthday month from the linkedList and print it
+(7) Check whether this linkedList contains any winter month inside it or not?

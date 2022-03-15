@@ -1,0 +1,5 @@
+<h4>Product Management Application</h4>
+<hr />
+<app-product *ngFor="let product of products" [productElement]="product">
+</app-product>
+<app-cockpit (productAdded)="onProductAdded($event)"></app-cockpit>

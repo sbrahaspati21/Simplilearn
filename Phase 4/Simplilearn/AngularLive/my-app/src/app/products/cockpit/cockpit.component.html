@@ -1,0 +1,19 @@
+<form class="form-inline">
+  <!-- <label>ProductName</label> -->
+  <input
+    name="productName"
+    type="text"
+    class="form-control"
+    [(ngModel)]="newProductName"
+    placeholder="Enter ProductName"
+  />
+  <!-- <label>StockCount</label> -->
+  <input
+    name="stockCount"
+    type="text"
+    class="form-control"
+    [(ngModel)]="newStockCount"
+    placeholder="Enter StockCount"
+  />
+  <button class="btn btn-primary" (click)="onAddProduct()">Add Product</button>
+</form>

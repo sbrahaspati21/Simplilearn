@@ -1,0 +1,56 @@
+Action Tag:
+1. productindex.jsp ---> ProductBean.java ---->  showbean.jsp ----> forward.jsp ---> forwarded.jsp
+
+<jsp:plugin>
+Plugin embeds tags or inserts java objects into a JSP page. It has three attributes:
+ type: applet/bean
+ code: It is the name of the class file.
+ codebase: It is the directory of the name of the class file.
+Syntax:   <jsp:plugin type="bean/applet" code="className" codebase="package.class">
+
+<jsp:param>
+It sends parameters to a bean or applet. Param acts as the child object of a plugin.
+Syntax:
+<jsp:params>
+<jsp:param name=“__” value="__"/ >
+</jsp:params>
+
+2) Color.java ----> pluginactiontag.jsp
+---------------------------------------------------------------------
+
+JSTL with EL:
+1. core tags ----> jstltags.jsp
+
+2. core tag <c:redirect>  ----> test.jsp
+
+3) formatting tags -----> fmttags.jsp
+  
+4) SQl tags -----> sqltags.jsp
+
+<sql:transaction>
+<sql:transaction dataSource="${db}">  
+   <sql:update var="count">  
+      UPDATE Student SET First_Name = 'Suraj' WHERE Id = 150  
+   </sql:update>  
+   <sql:update var="count">  
+      UPDATE Student SET Last_Name= 'Saifi' WHERE Id = 153  
+   </sql:update>  
+   <sql:update var="count">  
+     INSERT INTO Student   
+     VALUES (154,'Supriya', 'Jaiswal', '1995/10/6');  
+   </sql:update>  
+</sql:transaction> 
+
+5) xml tags  ----> xmltags.jsp
+
+6) function tags -----> functiontag.jsp
+
+6) EL
+ jstlEmployee.jsp ----> EmployeeServlet.java 
+ web.xml mapping and (run this using-  http://localhost:8082/ServletAndJSP/EmployeeServlet1)
+
+-----------------------------------------------------------------------------------------------------------
+Session Handling- using JSP
+
+sessionhandling.jsp ---> sessionlogin.jsp  ---> sessiondashboard.jsp ---->sessionlogout.jsp
+

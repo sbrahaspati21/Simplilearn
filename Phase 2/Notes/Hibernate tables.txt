@@ -1,0 +1,39 @@
+CREATE TABLE emp (empid int NOT NULL,empname varchar(50) NOT NULL,salary int NOT NULL, PRIMARY KEY (empid));
+
+insert into emp values(101,'Rohan',12000);
+insert into emp values(102,'Alia',15000);
+insert into emp values(103,'Shyam',11000);
+insert into emp values(104,'Abhishek',10000);
+insert into emp values(105,'Vikas',18000);
+insert into emp values(106,'Sonam',17000);
+
+
+CREATE TABLE emp99 (id int NOT NULL,name varchar(50) NOT NULL,salary int NOT NULL,designation varchar(50) NOT NULL, PRIMARY KEY (id));
+
+
+CREATE TABLE EmpHeritance(id int NOT NULL,type varchar(100) NOT NULL,name varchar(100), salary int, bonus int,pay_per_hour int, 
+contract_duration varchar(100), PRIMARY KEY (id));
+
+
+CREATE TABLE EmpTPC(id int NOT NULL, name varchar(100), PRIMARY KEY (id));
+
+CREATE TABLE EmpTPC_RE(id int NOT NULL, name varchar(100), salary int, bonus int, PRIMARY KEY (id));
+
+CREATE TABLE EmpTPC_CE(id int NOT NULL, name varchar(100), pay_per_hour int, contract_duration varchar(100), PRIMARY KEY (id));
+____________________________________________________________________________________________________________________________________
+
+
+CREATE TABLE EmpOTOMapp(employeeId int NOT NULL, name varchar(100), email varchar(500), PRIMARY KEY (employeeId));
+
+CREATE TABLE AddrOTOMapp(addressId int NOT NULL, addressLine1 varchar(500), city varchar(100), state varchar(100), country varchar(100), pincode int, FOREIGN KEY (addressId) REFERENCES EmpOTOMapp(employeeId));
+
+___________________________________________________________________________________________________________________________________________
+
+create table EmpOTMMapp (id INT NOT NULL auto_increment, first_name VARCHAR(20), last_name  VARCHAR(20), salary INT, PRIMARY KEY (id));
+
+create table CertificateOTM(id INT NOT NULL auto_increment, certificate_name VARCHAR(30), employee_id INT,PRIMARY KEY (id));
+
+___________________________________________________________________________________________________________________________________________
+
+create table Student(id int NOT NULL, name varchar(100), degree varchar(100), roll varchar(100), phone int, PRIMARY KEY (id));
+

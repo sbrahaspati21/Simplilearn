@@ -1,0 +1,70 @@
+JSP = html + java code
+- it is used for the dynamic content generation programming
+
+JSP will be convereted to servlet class by the web container whenever we load and call the JSP page
+-jspinit()----> this method can be overrididen
+-_jspservice ---> this method cannot be ovverriden
+-jspdestroy ---> this can be overriden
+
+demo.jsp (JSP) ---> demo_jsp.java(servelt)   ---> demo_jsp.class (bytecode file)
+
+Tags:
+(1) Scriptlet ---> any java code is to be written as it is inside the jsp use this tag
+<%   ---- java code ------  %>
+
+(2) Expression Tag ----> this is usedto print the output directly on the jsp page
+<%=  ------code ----- %>
+
+(3) Declaration Tag:----> used to declare any variable or method in the class
+<%! ------- code -------%>
+
+
+<% out.println("hello") %> ----> 
+
+PrintWriter out = resp.getWriter();
+		out.println("HELLO");
+
+jsp:forward-----> this is used to forward the request/response objects from one servlet to another servlet
+this is equal to "request dispatcher"
+
+jsp:include --->include the other page output in the current page( like <%@ include %>
+
+jsp:useBean: this is used to create the object of the java bean (like we create the object in java bean)
+jsp:setProperty ---> this is used similar to setter method of bean class
+jsp:getProperty ---> this is used similar to getter method of bean class
+
+<jsp:useBean class="java.com.Employee" id="emp">  ---> java.com.Employee emp = new java.com.Employee();
+
+
+JSP:::
+
+1)Scriptlet tag, expression tag, declaration tag
+scriptlet.html---->welcome.jsp
+
+2)implicit objects
+1st Program:  implicitobjects.jsp
+2nd Program:  index.jsp ---> response-redirect.jsp ---> handle-error.jsp 
+
+3) Standard tags
+actionTag.jsp
+
+4)Action Tags
+employee.html --->process.jsp----->Employee.java
+
+
+
+html ----> jsp page
+in html page design a small form
+username
+password
+subject 1 numnber
+subject 2 numnber
+subject 3 numnber
+subject 4 numnber
+submit button
+
+jps page
+(1) fetch all the data from the form to this jsp and print it using bth scriptlet and expression tag
+(2) using expression tag give me the total of all the subjects number and fetch the numbers from the html page using the
+expressio tag only
+
